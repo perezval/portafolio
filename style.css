@@ -1,0 +1,240 @@
+/* Header styles */
+header {
+    background-color: white;
+    padding: 1px; /* Padding reducido para hacer la barra mucho más estrecha */
+    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegura que la cabecera esté en frente */
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 20px;
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    line-height: 1.5; /* Altura de línea */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Logo styles */
+.logo {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* Negrita */
+    margin-left: 40px;
+    color: black;
+}
+
+/* Navbar link styles */
+.nav-link {
+    text-decoration: none;
+    color: black; /* Color negro para los enlaces del menú */
+}
+
+.nav-link:hover {
+    color: black;
+    background-color: rgb(223,216,194); /* Cambiar a tono marrón al hacer hover */
+}
+
+/* Menu item styles */
+.nav-item {
+    display: inline-block; /* Menú en línea */
+    margin-right: 20px; /* Espaciado entre los elementos del menú */
+}
+
+
+
+/* Cover section styles */
+#portada {
+    margin-top: 65px;
+    width: 100%;
+    overflow: hidden; /* Evita desbordamiento de contenido */
+}
+
+.img-portada {
+    width: 100%;
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Recorta la imagen para cubrir el contenedor */
+    object-position: center; /* Centra la imagen */
+}
+
+/* Presentation section styles */
+#presentacion {
+    padding: 60px 60px; /* Margen hacia arriba y hacia abajo */
+    text-align: left; /* Alinea el texto a la izquierda */
+    background-color: white;
+    margin-left: 40px; /* Margen izquierdo */
+}
+
+/* Presentation container styles */
+.contenedor-presentacion {
+    display: flex; /* Flexbox para distribuir los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alineación inicial de los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Spanish presentation styles */
+.presentacion-esp, .presentacion-eng {
+    flex-basis: 45%; /* Cada sección ocupa el 45% del ancho */
+    margin: 30px; /* Margen alrededor de cada sección */
+}
+
+
+
+/* Course section styles */
+#cursos {
+    padding: 40px 60px; /* Margen superior e inferior, y mayor margen lateral */
+    background-color: white; /* Fondo blanco */
+    text-align: center; /* Alinea el título al centro */
+}
+
+.titulo-cursos {
+    text-align: center; /* Alinea el título al centro */
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.card-custom {
+    width: 18rem; /* Ajusta este valor según lo que necesites */
+}
+
+
+
+/* Estilo para la imagen principal */
+.imagen-trabajos {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Estilo para el contenedor de trabajos */
+.contenedor-trabajos {
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+/* Estilo para el contenedor que alinea las imágenes y el texto */
+.trabajo-y-texto {
+    display: flex; /* Usa Flexbox para alinear los elementos en una fila */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor (parte superior) */
+    gap: 40px; /* Espacio entre las imágenes y el texto */
+}
+
+/* Estilo para el contenedor de imágenes */
+.trabajo {
+    display: flex; /* Usa Flexbox para alinear las imágenes horizontalmente */
+    flex-direction: row; /* Alinea las imágenes en una fila */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+/* Estilo para las imágenes de trabajo */
+.imagen-trabajo {
+    width: 300px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 5px solid rgb(223,216,194); /* Marco alrededor de las imágenes */
+    border-radius: 8px; /* Esquinas redondeadas para el marco */
+}
+
+/* Estilo para el texto junto a las imágenes */
+.texto-trabajo {
+    margin-right: 50px;
+    padding-right: 10px; /* Agrega un poco de espacio interno a la derecha del texto, ajusta según sea necesario */
+}
+
+/* Estilo para el texto resaltado junto a las imágenes */
+.texto-trabajo p strong {
+    font-weight: normal;
+    background-color: rgb(223,216,194) ;
+}
+
+/* Estilo específico para las partes 'esp' y 'eng' */
+.texto-trabajo p strong.idioma {
+    font-weight: bold; /* Mantiene la negrita para las partes 'esp' y 'eng' */
+    background-color: white;
+    color: rgb(223,216,194) ;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 1150px) {
+   
+    .trabajo-y-texto {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+        text-align: center; /* Alinea el texto al centro */
+    }
+    
+    .trabajo {
+        flex-direction: column; /* Alinea las imágenes en una columna en pantallas pequeñas */
+        gap: 10px; /* Espacio reducido entre las imágenes */
+        margin-right: 20%;
+    }
+    
+    .imagen-trabajo {
+        width: 100%; /* Ajusta el ancho de las imágenes para que ocupen todo el contenedor */
+    }
+}
+
+
+
+/* Estilo para la sección de contacto */
+#contacto {
+    text-align: center;
+    margin: 60px auto; /* Agrega un margen arriba y abajo de la sección y centra horizontalmente */
+    max-width: 600px; /* Ancho máximo del contenedor */
+}
+
+.titulo-contacto {
+    font-size: 45px;
+    margin-bottom: 30px; /* Para separar del formulario */
+}
+
+.inputForm {
+    padding: 10px 20px; /* Tamaño del botón de enviar */
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(223,216,194);
+    border-radius: 5px; /* Bordes redondeados para un diseño más suave */
+    border-color:rgb(223,216,194) ;
+}
+
+.inputForm:hover {
+    background-color: #6F4F28;
+    border-color:#6F4F28;
+}
+
+
+a.linkedin-button {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    color: #6F4F28;
+    padding: 5px 10px; /* Tamaño del botón */
+    border-radius: 5px; /* Bordes redondeados para un diseño más suave */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+a.linkedin-button:hover {
+    background-color: rgb(223,216,194);
+}
